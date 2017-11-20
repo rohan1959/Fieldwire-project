@@ -1,0 +1,5 @@
+<div class="floorplans">
+  <app-floorplan-card *ngFor="let floorplan of floorplans; let i  = index" [floorplan]="floorplan" [index]="i"
+                      [projectId]="projectId" (update)="updateFloorplan($event)"></app-floorplan-card>
+  <app-add-floorplan-btn (add)="add($event)"></app-add-floorplan-btn>
+</div>

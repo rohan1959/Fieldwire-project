@@ -1,0 +1,26 @@
+<div class="card" [style.background-image]="sanitizeImage(floorplan.thumb_300_url)"
+     [class.loading]="!floorplan.id" (click)="viewFloorplanModal()">
+    <p class="card-title">{{floorplan.name}}</p>
+</div>
+<ng-template #viewFloorplan let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Floorplan Preview: {{floorplan.name}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body" *ngIf="floorplan.type === 'application/pdf'">
+    <object [data]="documentURI" type="application/pdf" width="100%" height="500">
+      <p>This browser does not support PDFs. Please download the PDF to view it:
+        <a [href]="documentURI" target="_blank">Download PDF</a>.
+      </p>
+    </object>
+  </div>
+  <div class="modal-body" *ngIf="floorplan.type !== 'application/pdf'">
+    <img [src]="floorplan.thumb_2000_url" [alt]="floorplan.blueprint" class="img-fluid">
+  </div>
+  <div class="modal-footer">
+    <a class="btn btn-primary" [href]="floorplan.blueprint_url" target="_blank">Download</a>
+    <button type="button" class="btn btn-primary" (click)="c()">Close</button>
+  </div>
+</ng-template>

@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-body card-details">
+    <h4 class="card-title">{{project.name}}</h4>
+    <p class="card-text">{{project.description}}</p>
+  </div>
+  <div class="card-body">
+    <a href="#" class="btn btn-primary" [routerLink]="['/projects', project.id]">View Project</a>
+  </div>
+</div>

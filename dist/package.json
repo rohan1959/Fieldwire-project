@@ -1,0 +1,24 @@
+{
+  "name": "home-manager-api",
+  "version": "1.0.0",
+  "description": "Api Service for home manager",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.ts",
+    "start-dev": "nodemon index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "1.4.0",
+    "body-parser": "1.18.2",
+    "express": "4.16.2",
+    "formidable": "1.1.1",
+    "mongoose": "4.13.4",
+    "node-thumbnail": "0.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}

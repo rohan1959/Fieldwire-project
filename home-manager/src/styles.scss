@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.modal-90 .modal-dialog {
+  width: 90% !important;
+  max-width: none;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+#dropZone {
+  margin: 0;
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  .content {
+    height:100%;
+    display: block;
+    color: black;
+  }
+}

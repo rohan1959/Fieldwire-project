@@ -1,0 +1,13 @@
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a [routerLink]="['/projects']">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Project Details</li>
+  </ol>
+</nav>
+<div class="project-details">
+  <h1>{{project.name}}</h1>
+  <p>{{project.description}}</p>
+</div>
+
+<app-floorplans [floorplans]="project.floorplans" (addFloorplans)="addFloorplans($event)"
+                [projectId]="project.id" (update)="updateFloorplan($event)"></app-floorplans>
